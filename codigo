@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+
+int dado1,dado2,dado3,dado4,dado5,dado6,suma;
+int cubiletes;
+
+
+printf("Bienvenido a la aplicacion -Tirar cubiletes-   \n");
+printf("Cuantos cubiletes desea tirar?\n");
+scanf("%i",&cubiletes);
+srand(time(NULL));
+
+for (int i=1;i<=cubiletes;i++)
+{
+dado1=0;
+dado2=0;
+dado3=0;
+dado4=0;
+dado5=0;
+dado6=0;
+
+dado1= (rand() % 6) + 1;
+dado2= (rand() % 6) + 1;
+dado3= (rand() % 6) + 1;
+dado4= (rand() % 6) + 1;
+dado5= (rand() % 6) + 1;
+dado6= (rand() % 6) + 1;
+
+printf("Cubilete n %d: %d,%d,%d,%d,%d,%d \n",i,dado1,dado2,dado3,dado4,dado5,dado6);
+
+suma=suma+dado1+dado2+dado3+dado4+dado5+dado6;
+}
+
+printf("La suma total es: %d",suma);
+}
